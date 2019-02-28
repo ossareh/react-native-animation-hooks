@@ -37,14 +37,17 @@ const getInitialValue = (config: UseAnimationConfig) => {
 
 const getAnimationType = (config: UseAnimationConfig) => config.type || 'timing'
 
-export const useAnimation = (config: UseAnimationConfig): Animated.Value => {
+export const useAnimation = (
+  config: UseAnimationConfig,
+  callback?: Animated.EndCallback,
+): Animated.Value => {
   const animatedValue = useAnimatedValue(getInitialValue(config))
 
   const animate = () => {
     if (config.type === 'timing') {
-      Animated.timing(animatedValue, config).start()
+      Animated.timing(animatedValue, config).start(callback)
     } else if (config.type === 'spring') {
-      Animated.spring(animatedValue, config).start()
+      Animated.spring(animatedValue, config).start(callback)
     } else {
       // @ts-ignore
       throw new Error('unsupported animation type=' + config.type)
