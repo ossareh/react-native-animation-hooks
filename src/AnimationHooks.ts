@@ -17,6 +17,7 @@ type AnimationType = 'spring' | 'timing'
 interface BaseAnimationConfig {
   initialValue?: number
   type?: AnimationType
+  duration?: number
 }
 
 export type TimingAnimationConfig = BaseAnimationConfig &
