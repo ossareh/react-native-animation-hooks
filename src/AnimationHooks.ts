@@ -35,8 +35,6 @@ const getInitialValue = (config: UseAnimationConfig) => {
   }
 }
 
-const getAnimationType = (config: UseAnimationConfig) => config.type || 'timing'
-
 export const useAnimation = (
   config: UseAnimationConfig,
   callback?: Animated.EndCallback,
