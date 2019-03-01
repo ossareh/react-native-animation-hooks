@@ -1,12 +1,12 @@
 {
-  "name": "react-native-animation-hooks",
+  "name": "@ossareh/react-native-animation-hooks",
   "description": "Easily add React Native animations with hooks",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "node_modules/expo/AppEntry.js",
   "typings": "build/index.d.ts",
   "files": [
